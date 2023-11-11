@@ -1,0 +1,130 @@
+<html>
+<head>
+	<title>TestPage</title>
+	<style>
+		body{
+			text-align: center;
+			color: dimgray;
+			font-family: "MingLiU","游明朝","HGP教科書体",serif;
+		}
+		div#center {
+			width: 530px;
+			height: 3200px;
+			text-align: center;
+			background: white;
+			margin: 0px auto ; 
+			box-shadow: 0 0 8px gray;
+		}
+		.sa{
+			opacity: 0;
+			transition: all 1.0s ease;
+		}
+		.sa.show {
+			opacity: 1;
+			transform: none;
+		}
+		.sa--up {
+			transform: translate(0, 80px);
+		}
+		p {
+			padding-left: 135px;
+			text-align: left;
+		}
+		
+
+		.btn--colorconf,
+		a.btn--colorconf {
+			padding: 20px 100px;
+			text-decoration-line: none;
+			border: 0.5px solid dimgray;
+			color: dimgray;
+			background-color: white;
+		}
+		.btn--colorconf:hover,
+		a.btn--colorconf:hover {
+			padding: 20px 100px;
+			text-decoration-line: none;
+			border: 0.5px solid #BBB;
+			color: #BBB;
+			background: white;
+		}
+		a.btn--radius {
+			border-radius: 10000vh;
+		}
+		a.btn--shadow {
+			-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="center">
+		
+		<img src="./top.png" alt="top" width="530" height="850">
+		<div class="sa sa--up">
+			<br><br><br>
+			<img src="./item1.png" alt="item1" width="300" height="100">
+			<img src="" alt="" width="" height="">
+			<img src="" alt="" width="" height="">
+			<br>
+			<br>〇〇の候<br>
+			<br>皆さまいかがお過ごしでしょうか
+			<br>このたび　私たちは結婚式を挙げることになりました
+			<br>つきましては　ご挨拶をかねて
+			<br>ささやかなパーティーを催したいと思います
+			<br>ご多用中　誠に恐縮ではございますが
+			<br>ぜひご出席いただきたくご案内申し上げます
+			<br>
+			<br>敬具
+			<br>令和〇年〇月吉日
+			<br>
+			<br>伊藤　大輔
+			<br>伊藤　凛花
+			<br><br><br><br><br><br>
+		</div>
+		<div class="sa sa--up">
+			<img src="./picture.jpg" alt="picture" width="530" height="340">
+			<br><br><br><br><br>
+		</div>
+		<div class="sa sa--up">
+			<img src="./item2.png" alt="item2" width="300" height="100">
+			<br>
+			<p>
+				<br>日　時　　　令和13年11月23日（土）
+				<br>受　付　　　10時00分
+				<br>挙　式　　　10時30分
+				<br>披露宴　　　11時30分開宴
+				<br>場　所　　　ピアヴェルセル
+				<br>住　所　　　東京都港区青山 3-5-15
+				<br>電話番号　　03-1234-5678
+			</p>
+			<br><br><br>
+		</div>
+		<div class="sa sa--up">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25930.985781172254!2d139.69755608585177!3d35.66781111107726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9deb4e46b9%3A0x9d1be9b7bffd0ba!2z5p2x5Lqs6YO95riv5Yy6IOmdkuWxsQ!5e0!3m2!1sja!2sjp!4v1699448766070!5m2!1sja!2sjp" width="530" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<br><br>
+		</div>
+		<div class="sa sa--up">
+			<br>お手数ではございますが
+			<br>ご都合の程を12月31日迄に
+			<br>ご一報賜りますようお願い申し上げます
+		</div>
+		<br><br><br>
+		<a href="" class="btn btn--colorconf btn--radius btn--shadow">招待状に回答する</a>
+	</div>
+	<script type="text/javascript">
+		var scrollAnimationElm = document.querySelectorAll('.sa');
+		var scrollAnimationFunc = function() {
+		  for(var i = 0; i < scrollAnimationElm.length; i++) {
+		    var triggerMargin = 300;
+		    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+		      scrollAnimationElm[i].classList.add('show');
+		    }
+		  }
+		}
+		window.addEventListener('load', scrollAnimationFunc);
+		window.addEventListener('scroll', scrollAnimationFunc);
+	</script>
+</body>
+</html>
